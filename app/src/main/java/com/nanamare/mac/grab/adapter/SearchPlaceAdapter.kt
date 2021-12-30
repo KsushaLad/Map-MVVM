@@ -11,16 +11,12 @@ import com.nanamare.mac.grab.databinding.SearchPlaceItemBinding
 import com.nanamare.mac.grab.network.response.PlaceResponse
 import com.nanamare.mac.grab.ui.dialog.SearchPlaceDialog
 
-class SearchPlaceAdapter(
-    private val onPlaceClickListener: ((LocationVO) -> Unit)? = null
-) : PagedListAdapter<PlaceResponse.Result, RecyclerView.ViewHolder>(
-    SearchPlaceDialog.POST_COMPARATOR
-) {
+class SearchPlaceAdapter(private val onPlaceClickListener: ((LocationVO) -> Unit)? = null) :
+    PagedListAdapter<PlaceResponse.Result, RecyclerView.ViewHolder>(SearchPlaceDialog.POST_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return object : BaseViewHolder<PlaceResponse.Result, SearchPlaceItemBinding>(
-            R.layout.search_place_item, parent
-        ) {
+            R.layout.search_place_item, parent) {
             init {
                 itemView.setOnClickListener {
                     val item = getItem(adapterPosition)

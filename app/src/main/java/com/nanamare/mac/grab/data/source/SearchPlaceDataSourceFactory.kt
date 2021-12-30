@@ -60,7 +60,7 @@ class SearchPlaceDataSourceFactory(
             params: LoadParams<String>,
             callback: LoadCallback<String, PlaceResponse.Result>
         ) {
-            // 사용 x
+
         }
 
 

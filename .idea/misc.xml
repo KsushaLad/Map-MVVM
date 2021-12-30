@@ -8,9 +8,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GrabSample-master/app/src/main/res/layout/custom_toast.xml" value="0.5541666666666667" />
+        <entry key="..\:/GrabSample-master/app/src/main/res/layout/default_error_activity.xml" value="0.5541666666666667" />
+        <entry key="..\:/GrabSample-master/app/src/main/res/layout/loading_dialog.xml" value="0.5541666666666667" />
         <entry key="..\:/GrabSample-master/app/src/main/res/layout/main_activity.xml" value="0.5092592592592593" />
+        <entry key="..\:/GrabSample-master/app/src/main/res/layout/recent_search_place_item.xml" value="0.5541666666666667" />
         <entry key="..\:/GrabSample-master/app/src/main/res/layout/search_place_dialog.xml" value="0.5541666666666667" />
+        <entry key="..\:/GrabSample-master/app/src/main/res/layout/search_place_item.xml" value="0.5541666666666667" />
         <entry key="..\:/GrabSample-master/app/src/main/res/layout/select_place_bottom_sheet_dialog.xml" value="0.5541666666666667" />
+        <entry key="..\:/GrabSample-master/app/src/main/res/xml/searchable.xml" value="0.5541666666666667" />
       </map>
     </option>
   </component>

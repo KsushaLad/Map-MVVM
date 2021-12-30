@@ -68,7 +68,7 @@
                 android:textColor="@color/error"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:text="10분" />
+                tools:text="10минута" />
 
         </LinearLayout>
 

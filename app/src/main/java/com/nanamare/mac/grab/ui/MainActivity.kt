@@ -35,6 +35,7 @@ import com.nanamare.mac.grab.utils.getCarBitmap
 import com.nanamare.mac.grab.vm.MapViewModel
 import com.tedpark.tedpermission.rx2.TedRx2Permission
 import io.reactivex.android.schedulers.AndroidSchedulers
+import kotlinx.android.synthetic.main.search_place_dialog.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
@@ -44,12 +45,9 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
     GoogleMap.OnMapLongClickListener {
 
     private lateinit var googleMap: GoogleMap
-
     private lateinit var locationCallback: LocationCallback
     private val fusedLocationProviderClient by lazy { FusedLocationProviderClient(this) }
-
     private val mapViewModel by viewModel<MapViewModel>()
-
     private val selectBottomDialog by lazy { SelectPlaceBottomDialog.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -147,9 +145,7 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
                         .show(supportFragmentManager, "")
                 }
             })
-
         }
-
     }
 
     private fun addStartEndMarker(departure: LatLng, destination: LatLng): Pair<Marker, Marker> {
@@ -251,7 +247,7 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
     private fun drawOverViewPolyline(routes: List<LatLng>) {
         googleMap.clear()
         googleMap.addPolyline(PolylineOptions().addAll(routes)).apply {
-            color = ResourcesCompat.getColor(resources, R.color.point_E47B75, theme)
+            color = ResourcesCompat.getColor(resources, R.color.black_87, theme)
             isClickable = true
         }
     }
@@ -307,10 +303,6 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
                 mapViewModel.currLatLng.let { latLng ->
                     locationResult?.let { locationResult ->
                         for (location in locationResult.locations) {
-                            Log.d(
-                                TAG,
-                                "location lat : ${location.latitude} lng : ${location.longitude}"
-                            )
                             if (latLng == null) {
                                 mapViewModel.currLatLng =
                                     LatLng(location.latitude, location.longitude)
@@ -415,7 +407,6 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity),
 
     override fun onMapLongClick(latLng: LatLng?) {
         if (mapViewModel.liveIsDrivingStarted.value == true) return
-        Log.d(TAG, latLng.toString())
         latLng?.let {
             addOneMarker(it)
             selectBottomDialog.show(supportFragmentManager, selectBottomDialog.tag)

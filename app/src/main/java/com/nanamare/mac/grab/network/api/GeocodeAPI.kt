@@ -16,6 +16,7 @@ interface GeocodeAPI {
     fun getLocationUseLatLng(@Query("latlng") latLng: String): Single<ReverseGeocodeResponse>
 
     // Get detail place more than  Geocode API
-    @GET("place/textsearch/json")
-    fun getPlace(@Query("query") address: String) : Single<PlaceResponse>
+    @GET("geocode/json")
+    fun getPlace(@Query("address") address: String) : Single<PlaceResponse>
+    
 }

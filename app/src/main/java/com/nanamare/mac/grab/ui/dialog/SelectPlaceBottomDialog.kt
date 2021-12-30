@@ -41,7 +41,7 @@ class SelectPlaceBottomDialog :
 
     fun searchLocation(latLng: LatLng) {
         mapViewModel.getLocationUseLatLng("${latLng.latitude},${latLng.longitude}")
-        //mapViewModel.getLocationUseAddress("${latLng.latitude},${latLng.longitude}")
+       // mapViewModel.getLocationUseAddress("${latLng.latitude},${latLng.longitude}")
     }
 
     companion object {

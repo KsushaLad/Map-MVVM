@@ -1,5 +1,7 @@
 package com.nanamare.mac.grab.vm
 
+import android.view.View
+import android.view.inputmethod.EditorInfo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.LivePagedListBuilder
@@ -46,6 +48,41 @@ class SearchLocationViewModel(
             }
         }).build()
     }
+
+//    fun setUpSearchView() { //настройка представление поиска
+//        searchView = findViewById(R.id.search)
+//        searchView?.setOnEditorActionListener { v, actionId, _ ->
+//            var handled = false //обработка
+//            if (actionId == EditorInfo.IME_ACTION_SEARCH && v.text.toString().isNotEmpty()
+//            ) {
+//                retrieveLocationFrom(v.text.toString())
+//                closeKeyboard()
+//                handled = true
+//            }
+//            handled
+//        }
+//        textWatcher = searchTextWatcher
+//        searchView?.addTextChangedListener(textWatcher)
+//        if (!isLegacyLayoutEnabled) {
+//            searchView?.setOnFocusChangeListener { _: View?, hasFocus: Boolean ->
+//                if (hasFocus) {
+//                    showSearchLayout()
+//                }
+//            }
+//        }
+//    }
+
+//    fun retrieveLocationFrom(query: String) { //восстановление местоположения из строки
+//        if (searchZone != null && searchZone!!.isNotEmpty()) {
+//            retrieveLocationFromDefaultZone(query)
+//        }
+//        else if (isSearchZoneWithDefaultLocale) {
+//            retrieveLocationFromDefaultZone(query)
+//        } else {
+//            geocoderPresenter?.getFromLocationName(query)
+//        }
+//    }
+
 
     fun saveLocations(locationVO: LocationVO) {
         localSearchPlaceRepository.saveLocationVOList(locationVO) {

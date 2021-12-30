@@ -33,7 +33,7 @@
                 android:layout_marginTop="28dp"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
-                android:text="일시적인 오류 입니다" />
+                android:text="Это временная ошибка." />
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/H3RegularDarkgray"
@@ -42,7 +42,7 @@
                 android:layout_marginTop="26dp"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
-                android:text="잠시 후에 다시 시도해주세요" />
+                android:text="Повторите попытку через несколько минут" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:enabled="true"
             android:gravity="center"
             android:onClick="@{() -> view.onRefresh()}"
-            android:text="새로고침" />
+            android:text="Повтор" />
 
     </FrameLayout>
 

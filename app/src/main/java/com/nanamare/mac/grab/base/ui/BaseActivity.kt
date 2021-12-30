@@ -24,11 +24,9 @@ import io.reactivex.disposables.CompositeDisposable
 
 
 abstract class BaseActivity<B : ViewDataBinding>(@LayoutRes private val layoutId: Int) :
-    AppCompatActivity(),
-    BaseNavigator {
+    AppCompatActivity(), BaseNavigator {
 
     protected lateinit var binding: B
-
     protected val compositeDisposable = CompositeDisposable()
     private var loadingPopup: LoadingDialog? = null
     private var toast: Toast? = null
@@ -39,7 +37,6 @@ abstract class BaseActivity<B : ViewDataBinding>(@LayoutRes private val layoutId
             false
         )
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

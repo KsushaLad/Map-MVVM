@@ -31,7 +31,7 @@ android {
             buildConfigField "String", "LANGUAGE", "\"uk\""
             buildConfigField "String", "GOOGLE_SECRET_KEY", "\"AIzaSyAXrI3OF_DmXo-r6V_klQE_3mPEiZ4lIlo\""
             buildConfigField "String", "SERVER_URL", "\"https://maps.googleapis.com/maps/api/\""
-            resValue "string", "google_secret_key", "AIzaSyAXrI3OF_DmXo-r6V_klQE_3mPEiZ4lIlo"
+            resValue "string", "google_secret_key", "AIzaSyDqEW94b4fCPgRhVShKWLcPG3PfOZjbaLk"
         }
     }
     testOptions {

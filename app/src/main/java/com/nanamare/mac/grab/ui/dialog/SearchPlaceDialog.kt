@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -96,7 +97,9 @@ class SearchPlaceDialog :
 
             etKeyword.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-                    searchLocationViewModel.onSearchClick()
+                     searchLocationViewModel.onSearchClick()
+                    //searchLocationViewModel.retrieveLocationFrom(v.text.toString())
+                    //searchLocationViewModel.setUpSearchView()
                 }
                 true
             }
@@ -111,7 +114,6 @@ class SearchPlaceDialog :
                 is NetworkState.Success -> hideLoadingPopup()
                 is NetworkState.Error -> {
                     hideLoadingPopup()
-                    Log.e(TAG, it.throwable.toString())
                 }
             }
         })

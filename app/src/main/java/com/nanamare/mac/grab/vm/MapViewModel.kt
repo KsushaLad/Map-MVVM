@@ -20,9 +20,6 @@ import com.nanamare.mac.grab.network.response.ReverseGeocodeResponse.Result.Geom
 import io.reactivex.Observable
 import java.util.concurrent.TimeUnit
 
-/**
- * GeocodeAPITest, DirectionAPITest 통과
- */
 class MapViewModel(
     private val geocodeRepository: GeocodeRepository,
     private val directionRepository: DirectionRepository
@@ -188,6 +185,4 @@ class MapViewModel(
     fun changeUiMode() {
         liveDarkMode.value = !liveDarkMode.value!!
     }
-
-
 }
